@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>
+Competition
+</title>
+<script language="JavaScript">
+ function check()
+ {
+   if ((document.frm1.txtName.value) == "")
+     {
+        alert("You MUST enter your name before submitting.")
+        document.frm1.txtName.focus()
+     }
+     else
+     {
+         if (isNaN(document.frm1.txtAge.value)==true)
+          {
+             alert("You mest enter a number for your age")
+             frm1.txtAge.focus()
+          }
+          else
+          {
+             if((document.frm1.txtAge.value <= 16) ||
+               (document.frm1.txtAge.value > 35))
+             {
+                 alert("You CANNOT participate in the competition as you are not in the listed age group.")
+                 frm1.txtAge.focus()
+             }
+             else
+             {
+                 alert("Thanks for providing all the needed information. You will be told about the date, time and venue of the event soon.")
+                 document.frm1.submit
+             }
+          }
+      }
+  }
+</script>
+</head>
+<body bgcolor="#FCFFAC">
+<center>
+<br><marquee><b>THE KING OF THE PLANETS</b></marquee>
+<hr width="50%" size="15%" color="red">
+<center>
+<a href="mmwtpramanjupiter.html"><img src="button8.png"></a>&nbsp&nbsp&nbsp
+<a href="jupitermoons.html"><img src="button2.png"></a>&nbsp&nbsp&nbsp
+<a href="redspot.html"><img src="button5.png"></a>&nbsp&nbsp&nbsp
+<a href="atm.html"><img src="button6.png"></a>&nbsp&nbsp&nbsp
+<a href="http://localhost/j-reg3.php"><img src="button4.png"></a>&nbsp&nbsp&nbsp
+<a href="comp.html"><img src="button9.png"></a>&nbsp&nbsp&nbsp
+<a href="obsv.html"><img src="button7.png"></a><br>
+</center>
+<p><span style="font-size:30px ; color:brown">JUPO OBSERVATORY</span></p>
+<p><span style="font-size:20px ; color:brown ; letter-spacing:8px">The Competition</span></p></center>
+<p style="color:white ; background-color:red">We are organizing a competition for people of 16-35 years. Participants have to make a detailed project regarding features of a spaceship that can reach Jupiter's core without getting destroyed due to the stormy atmosphere of Jupiter.</p>
+<form name="frm1">
+<font size="20" color="purple">
+Enter your name:&nbsp
+<input type="Text" name="txtName" size="20"><br><br>
+Enter your age:&nbsp
+<input type="Text" name="txtAge" size="2"><br><br>
+Enter your Email id:&nbsp
+<input type="text" name="mail"><br><br>
+Select the age group:&nbsp 
+<select>
+<option>16-20</option>
+<option>20-25</option>
+<option>25-30</option>
+<option>30-35</option>
+</select>
+<br><br><br>
+Enter COUNTRY: &nbsp
+<input type="text" name="country">
+<br>
+<br></font>
+<input type="submit" name="submit" value="Submit" onclick="check()">
+</form>
+</body>
+</html>
